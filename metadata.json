@@ -1,0 +1,6 @@
+{
+  "name": "Ferasat Ayesha - Clinical Psychologist",
+  "description": "Support for a healthier and brighter you. Clinical psychologist and lecturer providing individual, couples, and psychological therapy services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

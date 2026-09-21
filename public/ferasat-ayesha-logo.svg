@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <!-- Background Lavender Circle -->
+  <circle cx="250" cy="250" r="236" fill="#e8e4f1" />
+
+  <!-- Lotus Logo Group -->
+  <g fill="none" stroke="#5c2474" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Upper Left Diagonal Petal -->
+    <path
+      d="M 190 310 C 160 270 128 220 134 165 C 162 180 188 230 216 295"
+      stroke-width="13"
+    />
+
+    <!-- Upper Right Diagonal Petal -->
+    <path
+      d="M 310 310 C 340 270 372 220 366 165 C 338 180 312 230 284 295"
+      stroke-width="13"
+    />
+
+    <!-- Lower Left Horizontal Leaf Outer Boundary -->
+    <path
+      d="M 206 372 C 155 380 82 368 25 272 C 95 264 160 274 200 316"
+      stroke-width="13"
+    />
+    <!-- Lower Left Leaf Center Vein -->
+    <path
+      d="M 200 346 C 145 342 85 320 25 272"
+      stroke-width="11"
+    />
+
+    <!-- Lower Right Horizontal Leaf Outer Boundary -->
+    <path
+      d="M 294 372 C 345 380 418 368 475 272 C 405 264 340 274 300 316"
+      stroke-width="13"
+    />
+    <!-- Lower Right Leaf Center Vein -->
+    <path
+      d="M 300 346 C 355 342 415 320 475 272"
+      stroke-width="11"
+    />
+
+    <!-- Central Solid Violet Petal with Pointed Droplet Tail -->
+    <path
+      d="M 250 78 
+         C 292 142 320 214 320 288 
+         C 320 338 296 378 272 400 
+         C 264 407 257 412 250 426 
+         C 243 412 236 407 228 400 
+         C 204 378 180 338 180 288 
+         C 180 214 208 142 250 78 Z"
+      fill="#5c2474"
+      stroke="none"
+    />
+
+    <!-- Center Almond Slit in Central Petal -->
+    <path
+      d="M 250 218 C 242 238 242 268 250 286 C 258 268 258 238 250 218 Z"
+      fill="#e8e4f1"
+      stroke="none"
+    />
+  </g>
+</svg>
