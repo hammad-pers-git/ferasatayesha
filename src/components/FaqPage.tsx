@@ -15,7 +15,8 @@ import {
   ArrowLeft,
   Info,
 } from 'lucide-react';
-import heroBannerImg from '../assets/images/faq_hero_ref_banner_1789893703553.jpg';
+import heroBannerImg from '../assets/images/faq_hero_books_1790047947513.jpg';
+import { BotanicalHeroCorner } from './BotanicalDecorations';
 
 export interface FaqPageProps {
   onOpenBooking: () => void;
@@ -490,60 +491,53 @@ export const FaqPage: React.FC<FaqPageProps> = ({ onOpenBooking, onSelectTab }) 
       ========================================================= */}
       <section
         id="faq-hero"
-        className="relative bg-[#faf8fc] border-b border-[#eee8f4] overflow-hidden w-full"
+        className="relative bg-[#faf8fc] border-b border-[#eee8f4] overflow-hidden w-full select-none"
       >
-        <div className="relative w-full min-h-[300px] sm:min-h-[320px] md:min-h-[345px] lg:min-h-[365px] xl:min-h-[375px] flex items-center">
+        <div className="relative w-full min-h-[440px] sm:min-h-[480px] lg:min-h-[520px] xl:min-h-[550px] flex items-center">
           {/* Panoramic Hero Image of Therapy space with round coffee table, vase with branches, 3 books ("Mental Health", "Self Growth", "Better Tomorrow") and armchair */}
-          <div className="absolute inset-0 w-full h-full z-0 overflow-hidden pointer-events-none select-none">
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
             <img
               id="faq-hero-bg-img"
               src={heroBannerImg}
-              alt="Therapy space with round coffee table, white ceramic vase, green eucalyptus branches, books on mental health, self growth, and better tomorrow, and armchair with lavender cushion"
-              className="w-full h-full object-cover object-[72%_center] sm:object-[68%_center] md:object-center"
+              alt="Therapy space with round coffee table, white ceramic vase, green eucalyptus branches, books on Mental Health, Self Growth, and Better Tomorrow, and armchair with lavender cushion"
+              className="w-full h-full object-cover object-[80%_center] sm:object-[76%_center] md:object-[72%_center] lg:object-center"
+              style={{
+                maskImage:
+                  'linear-gradient(to right, transparent 0%, transparent 18%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.4) 44%, rgba(0,0,0,0.8) 58%, black 72%)',
+                WebkitMaskImage:
+                  'linear-gradient(to right, transparent 0%, transparent 18%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.4) 44%, rgba(0,0,0,0.8) 58%, black 72%)',
+              }}
               referrerPolicy="no-referrer"
             />
 
-            {/* Seamless gradient fade blending the left edge of the photograph into the #faf8fc background */}
+            {/* Seamless full-width atmospheric blend ensuring zero visible split or seam across any viewport width */}
             <div
-              className="hidden md:block absolute inset-0 pointer-events-none"
+              className="absolute inset-0 pointer-events-none"
               style={{
                 background:
-                  'linear-gradient(to right, #faf8fc 0%, rgba(250,248,252,0.96) 24%, rgba(250,248,252,0.65) 38%, transparent 52%)',
-              }}
-            />
-
-            {/* Mobile ambient wash ensuring text remains crystal clear on smaller screens */}
-            <div
-              className="md:hidden absolute inset-0 z-[1] pointer-events-none"
-              style={{
-                background:
-                  'linear-gradient(to right, rgba(250,248,252,0.98) 0%, rgba(250,248,252,0.88) 65%, rgba(250,248,252,0.35) 100%)',
+                  'linear-gradient(to right, #faf8fc 0%, #faf8fc 20%, rgba(250,248,252,0.92) 32%, rgba(250,248,252,0.45) 48%, rgba(250,248,252,0) 65%)',
               }}
             />
           </div>
 
-          {/* Delicate botanical branch line art anchored at bottom-left corner */}
-          <div className="absolute left-0 bottom-0 pointer-events-none z-10 select-none">
-            <FaqHeroBotanicalBranch
-              className="w-36 sm:w-44 md:w-50 lg:w-56 h-auto"
-              stroke="#9e8fb5"
-              fill="none"
-            />
+          {/* Minimal Leaf Illustration on the Left Edge as per reference design */}
+          <div className="absolute left-0 bottom-0 pointer-events-none z-20 select-none">
+            <BotanicalHeroCorner className="w-24 sm:w-28 md:w-32 h-64 sm:h-80 text-[#9b8cbd]" />
           </div>
 
           {/* Left Content Container */}
-          <div className="max-w-7xl w-full mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 py-10 sm:py-12 md:py-14 relative z-10">
-            <div className="max-w-lg lg:max-w-[490px] xl:max-w-[510px]">
+          <div className="max-w-7xl w-full mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 py-12 sm:py-16 lg:py-20 relative z-10">
+            <div className="max-w-xl lg:max-w-[520px]">
               <p
                 id="faq-hero-eyebrow"
-                className="text-[11px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-[#63537e] mb-3 sm:mb-3.5"
+                className="text-xs sm:text-[13px] font-semibold tracking-[0.22em] uppercase text-[#645388] mb-3.5 sm:mb-4"
               >
                 FREQUENTLY ASKED QUESTIONS
               </p>
 
               <h1
                 id="faq-hero-heading"
-                className="font-serif-title text-3xl sm:text-[36px] md:text-[40px] lg:text-[44px] font-normal text-[#14294b] leading-[1.14] tracking-tight mb-3.5 sm:mb-4"
+                className="font-serif-title text-3xl sm:text-4xl lg:text-[46px] xl:text-[50px] font-normal text-[#152744] leading-[1.14] tracking-tight mb-4 sm:mb-5"
               >
                 Common Questions,
                 <br />
@@ -552,10 +546,11 @@ export const FaqPage: React.FC<FaqPageProps> = ({ onOpenBooking, onSelectTab }) 
 
               <p
                 id="faq-hero-description"
-                className="text-[#4b5e78] text-[13.5px] sm:text-[14px] lg:text-[14.5px] leading-[1.64] max-w-[460px] font-sans font-normal"
+                className="text-[#3b4c66] text-xs sm:text-[14px] lg:text-[15px] leading-relaxed max-w-lg font-sans font-normal"
               >
-                Find answers to some of the most common questions about my services, approach, and what
-                to expect from your therapy journey.
+                Find answers to some of the most common questions about
+                <br className="hidden sm:inline" /> my services, approach, and what to expect from your
+                <br className="hidden sm:inline" /> therapy journey.
               </p>
             </div>
           </div>

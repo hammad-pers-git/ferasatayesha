@@ -9,134 +9,9 @@ import {
   ArrowRight,
   CheckCircle2,
 } from 'lucide-react';
-import { BotanicalLeafBranch } from './BotanicalDecorations';
+import { BotanicalLeafBranch, BotanicalHeroCorner } from './BotanicalDecorations';
 import contactHeroDeskImg from '../assets/images/contact_hero_desk_1789974506841.jpg';
 import leafShadowImg from '../assets/images/leaf_shadow_branch_1789823110490.jpg';
-
-/**
- * Delicate botanical branch line art tailored for the Contact Hero section,
- * matching the reference image anchored at the bottom-left edge.
- */
-const ContactHeroBotanicalBranch: React.FC<{ className?: string }> = ({ className = 'w-44 h-auto' }) => (
-  <svg
-    viewBox="15 25 185 265"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    className={className}
-    aria-hidden="true"
-  >
-    {/* Main slender curving stem */}
-    <path
-      d="M 68 280 C 76 245, 92 212, 98 174 C 104 138, 114 96, 130 46"
-      stroke="#9280a9"
-      strokeWidth="1.2"
-      strokeLinecap="round"
-      opacity="0.85"
-    />
-
-    {/* 1. Leaf 1 (Bottom Left - pointing towards the corner) */}
-    <path
-      d="M 86 220 C 58 210, 24 186, 32 134 C 48 166, 76 194, 86 220 Z"
-      stroke="#9280a9"
-      strokeWidth="1.15"
-      strokeLinejoin="round"
-      fill="#ece5f8"
-      fillOpacity="0.28"
-    />
-    <path
-      d="M 86 220 C 66 186, 46 156, 32 134"
-      stroke="#9280a9"
-      strokeWidth="0.85"
-      strokeLinecap="round"
-      opacity="0.75"
-    />
-
-    {/* 2. Leaf 2 (Bottom Right - undulating horizontal leaf) */}
-    <path
-      d="M 97 206 C 120 190, 146 178, 172 178 C 154 206, 126 220, 97 206 Z"
-      stroke="#9280a9"
-      strokeWidth="1.15"
-      strokeLinejoin="round"
-      fill="#ece5f8"
-      fillOpacity="0.28"
-    />
-    <path
-      d="M 97 206 C 124 196, 148 186, 172 178"
-      stroke="#9280a9"
-      strokeWidth="0.85"
-      strokeLinecap="round"
-      opacity="0.75"
-    />
-
-    {/* 3. Leaf 3 (Small Sprout directly above bottom-right leaf) */}
-    <path
-      d="M 102 174 C 110 162, 125 156, 136 161 C 128 172, 114 178, 102 174 Z"
-      stroke="#9280a9"
-      strokeWidth="1.0"
-      strokeLinejoin="round"
-      fill="#ece5f8"
-      fillOpacity="0.28"
-    />
-    <path
-      d="M 102 174 C 114 167, 124 162, 136 161"
-      stroke="#9280a9"
-      strokeWidth="0.75"
-      strokeLinecap="round"
-      opacity="0.75"
-    />
-
-    {/* 4. Leaf 4 (Middle Left) */}
-    <path
-      d="M 105 152 C 90 128, 76 102, 82 76 C 97 94, 106 125, 105 152 Z"
-      stroke="#9280a9"
-      strokeWidth="1.15"
-      strokeLinejoin="round"
-      fill="#ece5f8"
-      fillOpacity="0.28"
-    />
-    <path
-      d="M 105 152 C 96 124, 88 100, 82 76"
-      stroke="#9280a9"
-      strokeWidth="0.85"
-      strokeLinecap="round"
-      opacity="0.75"
-    />
-
-    {/* 5. Leaf 5 (Middle Right) */}
-    <path
-      d="M 112 142 C 132 118, 164 104, 192 108 C 172 136, 140 146, 112 142 Z"
-      stroke="#9280a9"
-      strokeWidth="1.15"
-      strokeLinejoin="round"
-      fill="#ece5f8"
-      fillOpacity="0.28"
-    />
-    <path
-      d="M 112 142 C 136 128, 162 118, 192 108"
-      stroke="#9280a9"
-      strokeWidth="0.85"
-      strokeLinecap="round"
-      opacity="0.75"
-    />
-
-    {/* 6. Leaf 6 (Terminal Top Apex Leaf) */}
-    <path
-      d="M 128 98 C 123 70, 142 46, 164 34 C 170 58, 154 82, 128 98 Z"
-      stroke="#9280a9"
-      strokeWidth="1.15"
-      strokeLinejoin="round"
-      fill="#ece5f8"
-      fillOpacity="0.28"
-    />
-    <path
-      d="M 128 98 C 138 78, 150 56, 164 34"
-      stroke="#9280a9"
-      strokeWidth="0.85"
-      strokeLinecap="round"
-      opacity="0.75"
-    />
-  </svg>
-);
 
 interface ContactPageProps {
   onOpenBooking: () => void;
@@ -189,67 +64,64 @@ export const ContactPage: React.FC<ContactPageProps> = ({ onOpenBooking, onSelec
       ========================================================= */}
       <section
         id="contact-hero"
-        className="relative bg-[#faf8fc] border-b border-[#ece5f4] overflow-hidden w-full"
+        className="relative bg-[#faf8fc] border-b border-[#ece5f4] overflow-hidden w-full select-none"
       >
-        <div className="relative w-full min-h-[380px] sm:min-h-[400px] lg:min-h-[420px] xl:min-h-[440px] flex items-center">
+        <div className="relative w-full min-h-[440px] sm:min-h-[480px] lg:min-h-[520px] xl:min-h-[550px] flex items-center">
           {/* Panoramic Hero Image of Therapy Consultation Desk with books, white vase with leafy branches, coffee mug, and armchair in natural window light */}
-          <div className="absolute right-0 top-0 bottom-0 w-full md:w-[60%] lg:w-[58%] xl:w-[56%] h-full z-0 overflow-hidden pointer-events-none select-none">
+          <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
             <img
               id="contact-hero-bg-img"
               src={contactHeroDeskImg}
               alt="Peaceful therapy office desk with white ceramic vase with leafy branches on books and coffee cup"
-              className="w-full h-full object-cover object-[center_center]"
+              className="w-full h-full object-cover object-[80%_center] sm:object-[76%_center] md:object-[72%_center] lg:object-center"
+              style={{
+                maskImage:
+                  'linear-gradient(to right, transparent 0%, transparent 18%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.4) 44%, rgba(0,0,0,0.8) 58%, black 72%)',
+                WebkitMaskImage:
+                  'linear-gradient(to right, transparent 0%, transparent 18%, rgba(0,0,0,0.08) 30%, rgba(0,0,0,0.4) 44%, rgba(0,0,0,0.8) 58%, black 72%)',
+              }}
               referrerPolicy="no-referrer"
             />
 
-            {/* Seamless gradient fade blending the left edge of the photograph into the #faf8fc background */}
+            {/* Seamless full-width atmospheric blend ensuring zero visible split or seam across any viewport width */}
             <div
               className="absolute inset-0 pointer-events-none"
               style={{
                 background:
-                  'linear-gradient(to right, #faf8fc 0%, rgba(250,248,252,0.92) 8%, rgba(250,248,252,0.3) 22%, transparent 36%)',
+                  'linear-gradient(to right, #faf8fc 0%, #faf8fc 20%, rgba(250,248,252,0.92) 32%, rgba(250,248,252,0.45) 48%, rgba(250,248,252,0) 65%)',
               }}
             />
           </div>
 
-          {/* Mobile ambient wash ensuring text remains crystal clear on smaller screens */}
-          <div
-            className="md:hidden absolute inset-0 z-[1] pointer-events-none"
-            style={{
-              background:
-                'linear-gradient(to right, rgba(250,248,252,0.97) 0%, rgba(250,248,252,0.88) 65%, rgba(250,248,252,0.45) 100%)',
-            }}
-          />
-
-          {/* Delicate botanical branch line art anchored at bottom-left corner */}
-          <div className="absolute left-0 bottom-0 pointer-events-none z-10 select-none">
-            <ContactHeroBotanicalBranch className="w-32 sm:w-40 md:w-48 lg:w-56 h-auto" />
+          {/* Minimal Leaf Illustration on the Left Edge as per reference design */}
+          <div className="absolute left-0 bottom-0 pointer-events-none z-20 select-none">
+            <BotanicalHeroCorner className="w-24 sm:w-28 md:w-32 h-64 sm:h-80 text-[#9b8cbd]" />
           </div>
 
           {/* Main Content Container (Placed over the serene pale negative space on the left) */}
-          <div className="max-w-7xl w-full mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 py-12 sm:py-14 lg:py-16 relative z-10">
-            <div className="max-w-lg lg:max-w-[530px] xl:max-w-[560px]">
+          <div className="max-w-7xl w-full mx-auto px-6 sm:px-10 md:px-12 lg:px-16 xl:px-20 py-12 sm:py-16 lg:py-20 relative z-10">
+            <div className="max-w-xl lg:max-w-[520px]">
               <p
                 id="contact-hero-eyebrow"
-                className="text-xs sm:text-[12.5px] font-semibold tracking-[0.2em] uppercase text-[#685785] mb-3 sm:mb-3.5"
+                className="text-xs sm:text-[13px] font-semibold tracking-[0.22em] uppercase text-[#645388] mb-3.5 sm:mb-4"
               >
                 CONTACT US
               </p>
 
               <h1
                 id="contact-hero-heading"
-                className="font-serif-title text-3xl sm:text-4xl lg:text-[44px] xl:text-[48px] font-normal text-[#163259] leading-[1.16] tracking-tight mb-3.5 sm:mb-4"
+                className="font-serif-title text-3xl sm:text-4xl lg:text-[46px] xl:text-[50px] font-normal text-[#152744] leading-[1.14] tracking-tight mb-4 sm:mb-5"
               >
                 Let’s Connect
               </h1>
 
-              <div
+              <p
                 id="contact-hero-description"
-                className="text-[#4a5e78] text-[13.5px] sm:text-[14.5px] lg:text-[15px] leading-[1.68] max-w-[480px] font-sans font-normal"
+                className="text-[#3b4c66] text-xs sm:text-[14px] lg:text-[15px] leading-relaxed max-w-lg font-sans font-normal"
               >
-                <p>Have a question or would like to schedule a consultation?</p>
-                <p className="mt-0.5 sm:mt-1">Get in touch with Ferasat Ayesha.</p>
-              </div>
+                Have a question or would like to schedule a consultation?
+                <br className="hidden sm:inline" /> Get in touch with Ferasat Ayesha.
+              </p>
             </div>
           </div>
         </div>
